@@ -1,8 +1,5 @@
 """
-.. module:: paperscraper
-   :synopsis: A class to facilitate the management of multiple scrapers for journal aggregators and publishing sites
-
-.. moduleauthor:: Andriy Mulyar <contact@andriymulyar.com>
+A class to facilitate the management of multiple scrapers for journal aggregators and publishing sites
 """
 from paperscraper.aggregators.doi_aggregator import DOIAggregator
 from .aggregators.pubmed_aggregator import PubMedAggregator
