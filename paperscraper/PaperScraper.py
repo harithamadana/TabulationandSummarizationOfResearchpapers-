@@ -13,9 +13,6 @@ import pkg_resources
 
 class PaperScraper():
     """This class provides a direct interface to the inner functionality of paperscraper
-
-    .. note::
-
        This is the only class needed to utilize all features of paperscraper.
 
     """
@@ -25,11 +22,6 @@ class PaperScraper():
 
         Initializes a PaperScraper that can scrape text and meta-data from scientific journals. Individual journal
         scrapers and journal link aggregators are implemented in :mod:'scrapers' and :mod:'aggregators'.
-
-        :param webdriver_path: The file path of a custom web driver to utilize, defaults to utilize the chromedriver
-            that comes installed with the package.
-        :type webdriver_path: str.
-
         """
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
@@ -80,8 +72,6 @@ class PaperScraper():
     def extract_from_pmid(self, pmid):
         """
         Attempts to retrieve a paper given its PMID
-
-        :param pmid:
         :return: An OrderedDict object containing the extracted paper
         """
         pm = PubMedAggregator(self.driver)
